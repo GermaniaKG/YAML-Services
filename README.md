@@ -1,5 +1,12 @@
 # Germania YAML Services
 
+
+## Installation
+
+```bash
+$ composer require germania-kg/yaml-services
+```
+
 ## Parse YAML string
 
 ```php
