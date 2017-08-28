@@ -27,7 +27,8 @@ class YamlParserCallableTest extends \PHPUnit_Framework_TestCase
         $logger_mock = $logger->reveal();
 
         return [
-            [ 0, $logger_mock ]
+            [ 0, $logger_mock ],
+            [ 14, $logger_mock ]
         ];
     }
 }
