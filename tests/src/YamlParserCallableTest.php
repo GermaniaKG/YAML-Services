@@ -2,10 +2,9 @@
 namespace tests;
 
 use Germania\YamlServices\YamlParserCallable;
-use Pimple\Container;
-use Symfony\Component\Finder\Finder;
-use Psr\Log\NullLogger;
 use Psr\Log\LoggerInterface;
+use Symfony\Component\Yaml\Yaml;
+
 
 class YamlParserCallableTest extends \PHPUnit_Framework_TestCase
 {
@@ -16,9 +15,47 @@ class YamlParserCallableTest extends \PHPUnit_Framework_TestCase
     public function testInstantiation( $flags, $logger )
     {
         $sut = new YamlParserCallable( $flags, $logger );
+        $sut = new YamlParserCallable( $flags );
+        $sut = new YamlParserCallable( );
         $this->assertTrue( is_callable( $sut ));
     }
 
+
+    /**
+     * @dataProvider provideParsingData
+     */
+    public function testParsingFlagsOnCtor($data, $flags, $data_type)
+    {
+        $yaml_data = Yaml::dump($data);
+
+        $sut = new YamlParserCallable( $flags );
+        $result = $sut($yaml_data);
+        $this->assertInternalType( $data_type, $result);
+    }
+
+    /**
+     * @dataProvider provideParsingData
+     */
+    public function testParsingFlagsOnInvokation($data, $flags, $data_type)
+    {
+        $yaml_data = Yaml::dump($data);
+
+        $sut = new YamlParserCallable;
+        $result = $sut($yaml_data, $flags);
+        $this->assertInternalType( $data_type, $result);
+    }
+
+
+
+    public function provideParsingData()
+    {
+        $data = array('foo' => 'bar', 'number' => 42, 'sub' => array('user' => 'doe'));
+
+        return [
+            [ $data, 0, "array" ],
+            [ $data, Yaml::PARSE_OBJECT_FOR_MAP, "object" ]
+        ];
+    }
 
 
     public function provideCtorArguments()
@@ -28,7 +65,7 @@ class YamlParserCallableTest extends \PHPUnit_Framework_TestCase
 
         return [
             [ 0, $logger_mock ],
-            [ 14, $logger_mock ]
+            [ 23, $logger_mock ]
         ];
     }
 }
