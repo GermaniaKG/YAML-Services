@@ -16,7 +16,7 @@ class YamlParserCallableTest extends \PHPUnit_Framework_TestCase
     public function testInstantiation( $flags, $logger )
     {
         $sut = new YamlParserCallable( $flags, $logger );
-
+        $this->assertTrue( is_callable( $sut ));
     }
 
 
