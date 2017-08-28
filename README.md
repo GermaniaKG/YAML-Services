@@ -156,6 +156,21 @@ $dic->extend('Yaml.Logger', function( $logger, $dic) {
 $ git clone git@github.com:GermaniaKG/YAML-Services.git
 ```
 
+## Unit testing
+
+Create a `phpunit.xml` from `phpunit.xml.dist` to configure PhpUnit, or leave as is.
+Dive into project root and issue:
+
+```bash
+$ phpunit
+```
+
+
+
+
+
+
+
 
 
 
