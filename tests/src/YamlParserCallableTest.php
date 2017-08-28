@@ -33,6 +33,7 @@ class YamlParserCallableTest extends \PHPUnit_Framework_TestCase
         $this->assertInternalType( $data_type, $result);
     }
 
+
     /**
      * @dataProvider provideParsingData
      */
@@ -44,7 +45,6 @@ class YamlParserCallableTest extends \PHPUnit_Framework_TestCase
         $result = $sut($yaml_data, $flags);
         $this->assertInternalType( $data_type, $result);
     }
-
 
 
     public function provideParsingData()
