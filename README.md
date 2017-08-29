@@ -2,6 +2,11 @@
 
 **Callable wrappers around Symfony's YAML component, with Pimple 3 Service provider and optional PSR3 Logger support.**
 
+[![Build Status](https://travis-ci.org/GermaniaKG/YAML-Services.svg?branch=master)](https://travis-ci.org/GermaniaKG/YAML-Services)
+[![Code Coverage](https://scrutinizer-ci.com/g/GermaniaKG/YAML-Services/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/YAML-Services/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/GermaniaKG/YAML-Services/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/YAML-Services/?branch=master)
+
+
 ## Installation
 
 ```bash
