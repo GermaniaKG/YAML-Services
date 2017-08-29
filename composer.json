@@ -34,8 +34,7 @@
 
 	"require-dev": {
 		"satooshi/php-coveralls": "^1.0",
-		"phpunit/phpunit": "^5.2",
-		"symfony/finder": "^3.2"
+		"phpunit/phpunit": "^5.2"
 	}
 
 
