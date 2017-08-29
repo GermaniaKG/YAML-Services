@@ -42,6 +42,7 @@ class YamlParserCallable
         $flags = is_integer($yaml_flags) ? $yaml_flags : $this->default_yaml_flags;
 
         $this->logger->info("Parse YAML content", [
+            'length' => mb_strlen( $yaml_content ),
             'flags' => $flags
         ]);
 

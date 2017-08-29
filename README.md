@@ -1,5 +1,6 @@
 # Germania YAML Services
 
+**Callable wrappers around Symfony's YAML component, with Pimple 3 Service provider and optional PSR3 Logger support.**
 
 ## Installation
 
