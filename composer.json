@@ -2,7 +2,7 @@
 	"name":        "germania-kg/yaml-services",
 	"description": "Callable Symfony YAML wrapper, with Pimple Service provider and PSR-3 Logger support",
 
-	"keywords":   [ "YAML", "Callable", "Pimple", "Symfony Finder", "Service Provider" ],
+	"keywords":   [ "YAML", "Callable", "Symfony YAML", <"Symfony Finder", "Pimple", "Service Provider" ],
 
 	"type":        "library",
 	"license":     "MIT",
@@ -25,13 +25,10 @@
       "psr-4": { "tests\\": "tests/src" }
   },
 
-  "suggest": {
-  	"symfony/finder": "Symfony Finder component, as required by YamlFileParserCallable"
-  },
-
 	"require": {
 		"pimple/pimple": "^3.0",
 		"symfony/yaml": "^3.2",
+		"symfony/finder": "^3.0",
 		"psr/log": "^1.0"
 	},
 
