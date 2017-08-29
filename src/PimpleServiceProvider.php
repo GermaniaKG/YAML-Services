@@ -50,17 +50,17 @@ class PimpleServiceProvider implements ServiceProviderInterface
     {
 
 
-        $dic['Yaml.Flags'] = function($dic) {
+        $dic['Yaml.Flags'] = function() {
             return $this->yaml_flags;
         };
 
 
-        $dic['Yaml.Finder'] = function($dic) {
+        $dic['Yaml.Finder'] = function() {
             return $this->finder;
         };
 
 
-        $dic['Yaml.Logger'] = function($dic) {
+        $dic['Yaml.Logger'] = function() {
             return $this->logger;
         };
 
