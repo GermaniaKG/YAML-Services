@@ -4,7 +4,8 @@ dist: trusty
 language: php
 php:
   - "5.6"
-  - "7.0"
+  # Symfony components ^3.3 do not like PHP 7.0
+  # - "7.0"
   - "7.1"
   - hhvm
 
