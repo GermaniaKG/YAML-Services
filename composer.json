@@ -1,6 +1,6 @@
 {
 	"name":        "germania-kg/yaml-services",
-	"description": "Symfony YAML Callables with Pimple ServiceProvider",
+	"description": "Callable wrappers around Symfony's YAML component, with Pimple ServiceProvider and PSR-3 Logger support",
 
 	"keywords":   [ "YAML", "Callable", "Pimple", "Symfony Finder", "Service Provider" ],
 
