@@ -51,6 +51,16 @@ class YamlFileParserCallableTest extends \PHPUnit_Framework_TestCase
         $this->assertInternalType( $data_type, $result);
     }
 
+    /**
+     * @dataProvider provideParsingData
+     */
+    public function testNullResultOnFileNotFound($flags, $data_type)
+    {
+        $sut = new YamlFileParserCallable( $this->finder );
+        $result = $sut("Not_a_file", $flags);
+        $this->assertNull( $result);
+    }
+
 
     public function provideParsingData()
     {
