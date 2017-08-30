@@ -5,6 +5,7 @@
 [![Build Status](https://travis-ci.org/GermaniaKG/YAML-Services.svg?branch=master)](https://travis-ci.org/GermaniaKG/YAML-Services)
 [![Code Coverage](https://scrutinizer-ci.com/g/GermaniaKG/YAML-Services/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/YAML-Services/?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/GermaniaKG/YAML-Services/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/YAML-Services/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/GermaniaKG/YAML-Services/badges/build.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/YAML-Services/build-status/master)
 
 ## Installation
 
@@ -98,6 +99,7 @@ print_r( $result );
 
 ## Pimple Service Provider
 
+### Registering the Service Provider
 ```php
 <?php
 use Germania\YamlServices\PimpleServiceProvider;
@@ -110,7 +112,7 @@ $yaml_services = new PimpleServiceProvider;
 $dic->register( $yaml_services );
 ```
 
-And somewhere else in your project:
+### Use YAML services
 
 ```php
 <?php
@@ -123,7 +125,7 @@ $parser = $dic['Yaml.FileParser'];
 $result = $parser( "config.yaml" );
 ```
 
-## Configuring the Service Provider
+### Configuring the Service Provider
 
 **The PimpleServiceProvider constructor** allows you to optionally pass these dependencies:
 
@@ -159,17 +161,19 @@ $dic->extend('Yaml.Logger', function( $logger, $dic) {
 
 ```bash
 $ git clone git@github.com:GermaniaKG/YAML-Services.git
+$ cd YAML-Services
+$ composer install
 ```
 
-## Unit testing
 
-Create a `phpunit.xml` from `phpunit.xml.dist` to configure PhpUnit, or leave as is.
-Dive into project root and issue:
+## Unit tests
+
+Either copy `phpunit.xml.dist` to `phpunit.xml` and adapt to your needs, or leave as is. 
+Run [PhpUnit](https://phpunit.de/) like this:
 
 ```bash
-$ phpunit
+$ vendor/bin/phpunit
 ```
-
 
 
 
