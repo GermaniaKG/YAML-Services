@@ -1,11 +1,12 @@
-# Default as of Sep 2017
+# .travis.yml
+
+# Default as of Sep. 2017
 dist: trusty
 
 language: php
 php:
   - "5.6"
-  # Symfony components ^3.3 do not like PHP 7.0
-  # - "7.0"
+  #- "7.0"
   - "7.1"
   - hhvm
 
