@@ -6,6 +6,7 @@
 [![Code Coverage](https://scrutinizer-ci.com/g/GermaniaKG/YAML-Services/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/YAML-Services/?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/GermaniaKG/YAML-Services/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/YAML-Services/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/GermaniaKG/YAML-Services/badges/build.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/YAML-Services/build-status/master)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Installation
 
