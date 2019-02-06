@@ -2,14 +2,16 @@
 
 **Callable wrappers around Symfony's YAML component, with Pimple 3 Service provider and optional PSR3 Logger support.**
 
-[![Latest Stable Version](https://poser.pugx.org/germania-kg/yaml-services/v/stable)](https://packagist.org/packages/germania-kg/yaml-services)
-[![Build Status](https://travis-ci.org/GermaniaKG/YAML-Services.svg?branch=master)](https://travis-ci.org/GermaniaKG/YAML-Services)
-[![Code Coverage](https://scrutinizer-ci.com/g/GermaniaKG/YAML-Services/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/YAML-Services/?branch=master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/GermaniaKG/YAML-Services/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/YAML-Services/?branch=master)
-[![Build Status](https://scrutinizer-ci.com/g/GermaniaKG/YAML-Services/badges/build.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/YAML-Services/build-status/master)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Installation
+[![Packagist](https://img.shields.io/packagist/v/germania-kg/yaml-services.svg?style=flat)](https://packagist.org/packages/germania-kg/yaml-services)
+[![PHP version](https://img.shields.io/packagist/php-v/germania-kg/yaml-services.svg)](https://packagist.org/packages/germania-kg/yaml-services)
+[![Build Status](https://img.shields.io/travis/GermaniaKG/YAML-Services.svg?label=Travis%20CI)](https://travis-ci.org/GermaniaKG/YAML-Services)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/GermaniaKG/YAML-Services/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/YAML-Services/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/GermaniaKG/YAML-Services/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/YAML-Services/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/GermaniaKG/YAML-Services/badges/build.png?b=master)](https://scrutinizer-ci.com/g/GermaniaKG/YAML-Services/build-status/master)
+
+
+## Installation with Composer
 
 ```bash
 $ composer require germania-kg/yaml-services
@@ -162,20 +164,21 @@ $dic->extend('Yaml.Logger', function( $logger, $dic) {
 ## Development
 
 ```bash
-$ git clone git@github.com:GermaniaKG/YAML-Services.git
+$ git clone https://github.com/GermaniaKG/YAML-Services.git
 $ cd YAML-Services
 $ composer install
 ```
 
-
 ## Unit tests
 
-Either copy `phpunit.xml.dist` to `phpunit.xml` and adapt to your needs, or leave as is. 
-Run [PhpUnit](https://phpunit.de/) like this:
+Either copy `phpunit.xml.dist` to `phpunit.xml` and adapt to your needs, or leave as is. Run [PhpUnit](https://phpunit.de/) test or composer scripts like this:
 
 ```bash
+$ composer test
+# or
 $ vendor/bin/phpunit
 ```
+
 
 
 
