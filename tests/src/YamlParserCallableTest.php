@@ -6,7 +6,7 @@ use Psr\Log\LoggerInterface;
 use Symfony\Component\Yaml\Yaml;
 
 
-class YamlParserCallableTest extends \PHPUnit_Framework_TestCase
+class YamlParserCallableTest extends \PHPUnit\Framework\TestCase
 {
 
     /**

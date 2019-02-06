@@ -6,7 +6,7 @@ use Psr\Log\LoggerInterface;
 use Symfony\Component\Yaml\Yaml;
 use Symfony\Component\Finder\Finder;
 
-class YamlFileParserCallableTest extends \PHPUnit_Framework_TestCase
+class YamlFileParserCallableTest extends \PHPUnit\Framework\TestCase
 {
     public $finder;
     public $data_file = 'sample.yaml';

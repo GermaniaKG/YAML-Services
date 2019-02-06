@@ -7,7 +7,7 @@ use Symfony\Component\Finder\Finder;
 use Psr\Log\NullLogger;
 use Psr\Log\LoggerInterface;
 
-class PimpleServiceProviderTest extends \PHPUnit_Framework_TestCase
+class PimpleServiceProviderTest extends \PHPUnit\Framework\TestCase
 {
 
 
